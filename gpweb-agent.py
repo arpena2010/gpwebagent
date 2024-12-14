@@ -13,12 +13,15 @@ from supabase import create_client, Client
 #SUPABASE_URL = os.getenv("SUPABASE_URL")
 #SUPABASE_KEY = os.getenv("SUPABASE_KEY")
 #WEBHOOK_URL = os.getenv("WEBHOOK_URL")
-
+# Obter variáveis de ambiente EM PRODUCAO
+#SUPABASE_URL = st.getenv("SUPABASE_URL")
+#SUPABASE_KEY = st.getenv("SUPABASE_KEY")
+#WEBHOOK_URL = st.getenv("WEBHOOK_URL")
 
 # Obter variáveis de ambiente EM PRODUCAO
-SUPABASE_URL = st.getenv("SUPABASE_URL")
-SUPABASE_KEY = st.getenv("SUPABASE_KEY")
-WEBHOOK_URL = st.getenv("WEBHOOK_URL")
+SUPABASE_URL = st.secrets["SUPABASE_URL"]
+SUPABASE_KEY = st.secrets["SUPABASE_KEY"]
+WEBHOOK_URL = st.secrets["WEBHOOK_URL"]
 
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
