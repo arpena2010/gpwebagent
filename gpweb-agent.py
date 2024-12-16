@@ -127,7 +127,7 @@ def main():
                 with st.chat_message("assistant"):
                     st.markdown(ai_message)
             else:
-                st.error(f"Error: {response.status_code} - {response.text}")
+                st.error(f"Error: {response.status_code} - {response.text} - { WEBHOOK_URL }")
 
 if __name__ == "__main__":
     main()
