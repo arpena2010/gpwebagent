@@ -66,7 +66,7 @@ def handle_logout():
 def auth_ui():
     ## Desabilitei o sign up
     #tab1, tab2 = st.tabs(["Login", "Sign Up"])
-    tab1, tab2 = st.tabs(["Login", ""])
+    tab1, tab2 = st.tabs(["Login"])
     
     with tab1:
         email = st.text_input("Email", key="login_email")
