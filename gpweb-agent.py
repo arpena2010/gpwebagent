@@ -30,7 +30,7 @@ def login(email: str, password: str):
         res = supabase.auth.sign_in_with_password({"email": email, "password": password})
         return res
     except Exception as e:
-        st.error(f"Login failed: {str(e)}")
+        st.error(f"Login failedd: {str(e)}")
         return None
 
 def signup(email: str, password: str):
